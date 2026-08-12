@@ -2,8 +2,6 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from routes.uploads import router as upload_router
 from routes.resumes import router as resume_router
-
-
 from routes.job import router as job_router
 from routes.match import router as match_router
 from fastapi.staticfiles import StaticFiles
