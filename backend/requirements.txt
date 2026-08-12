@@ -11,6 +11,6 @@ typing_extensions==4.16.0
 uvicorn
 dotenv
 google-genai
-fitz
+PyMuPDF
 huggingface_hub
 transformers
