@@ -1,16 +1,18 @@
-import requests
+import os
+from huggingface_hub import InferenceClient
 
 
-# Hugging Face Inference API URL for embeddings
-API_URL = "https://api-inference.huggingface.co/pipeline/feature-extraction/sentence-transformers/all-MiniLM-L6-v2"
-headers = {"Authorization": "Bearer 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"}
+client = InferenceClient(
+    provider="hf-inference",
+    api_key=os.environ["HF_TOKEN"],
+)
+
 
 def get_embedding(text):
-    response = requests.post(
-        API_URL, headers=headers, json={
-            "inputs": text, "options": {"wait_for_model": True}}
+    return client.feature_extraction(
+        text,
+        model="sentence-transformers/all-MiniLM-L6-v2",
     )
-    return response.json()
 
 
 def create_embedding(text):
