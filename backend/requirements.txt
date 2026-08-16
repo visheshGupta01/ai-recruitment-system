@@ -18,4 +18,3 @@ pymongo
 python-multipart
 scikit-learn
 google-generativeai
-fitz
