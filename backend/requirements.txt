@@ -17,4 +17,5 @@ transformers
 pymongo
 python-multipart
 scikit-learn
-google.generativeai
+google-generativeai
+fitz
