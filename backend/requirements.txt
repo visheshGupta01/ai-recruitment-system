@@ -16,3 +16,4 @@ huggingface_hub
 transformers
 pymongo
 python-multipart
+sklearn
