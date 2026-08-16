@@ -6,8 +6,6 @@ load_dotenv()
 
 client = MongoClient(os.getenv("MONGO_URI"))
 
-client.admin.command("ping")
-
 print("MongoDB connected successfully")
 
 db = client["AIRecruitment"]
